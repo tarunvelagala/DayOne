@@ -56,5 +56,16 @@
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
   "private": true
 }
